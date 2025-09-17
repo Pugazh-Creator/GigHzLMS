@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GigHz LMS</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="Settings.css">
+    <script src="jquery.js"></script>
+    <script src="common.js"></script>
+    <script src="Settings.js"></script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div id="hamburger" class="hamburger" onclick="toggleSidebar()">☰</div>
+            <div class="header-right">
+                <div id="notifications" class="icon-btn" onclick="toggleNotificationsDropdown(event)">
+                    🔔
+                    <span class="badge" id="notifCount">3</span>
+                    <div id="notificationsDropdown" class="notifications-dropdown">
+                        <h4>Unread Notifications</h4>
+                        <ul class="notificationList">
+                        </ul>
+                    </div>
+                </div>
+                <div class="icon-btn" title="Help" onclick="location.href='Help.html'">❓</div>
+                <div class="icon-btn" title="Account Settings" onclick="location.href='Settings.html'">⚙️</div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <aside id="sidebar" class="sidebar">
+                <img src="../Logo.png" alt="Logo" class="logo" />
+                <nav>
+                    <a href="Dashboard.html" style="color: #fcb6d6; background: #b52768;"><span><i class="bi bi-house"></i></span> Dashboard</a>
+                    <a href="Courses.html"><span><i class="bi bi-journals"></i></span> Courses</a>
+                    <a href="Certificates.html"><span><i class="bi bi-card-checklist"></i></span> Certificates</a>
+                    <a href="Events.html"><span><i class="bi bi-calendar2-event"></i></span> Events</a>
+                    <a href="Forum.html"><span><i class="bi bi-chat"></i></span> Forum</a>
+                    <a href="JobPortal.html"><span><i class="bi bi-suitcase-lg"></i></span> Job Portal</a>
+                    <a href="GigHzAI.html"><span><i class="bi bi-anthropic"></i></span> GigHz AI</a>
+                </nav>
+            </aside>
+
+            <main class="main">
+                <section class="account-settings">
+                    <h2 class="section-title">Account Settings</h2>
+                    <h4>Only highlighted settings can be changed*</h4>
+                    <div class="settings-card">
+
+                        <div class="Profile">
+                            <div class="profile-container">
+                                <img alt="Profile" class="profile-pic avatar-img" id="profileImage">
+                                <div class="profile-buttons">
+                                    <button class="remove-btn change-avatar-btn">Change</button>
+                                    <button class="remove-btn remove-avatar-btn">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <form class="settings-form">
+
+                            <div class="themed-table-container">
+                                <table class="themed-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Levels</th>
+                                            <th>Registration Date</th>
+                                            <th>Offer Applied</th>
+                                            <th>Amount Due</th>
+                                            <th>Level Period</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="PasswordResetOptions" style="display:flex;justify-content:space-between;margin-block:15px;margin-right:5px;">
+                                <label>Password Options (Requires logging in again): </label>
+                                <a class="themed-link" href="ResetPassword.html">Reset password and hint</a>
+                            </div>
+                            <div class="ReferralCode" style="display:flex;justify-content:space-between;margin-block:15px;margin-right:5px;">
+                                <label>Referral Code: </label>
+                                <a class="referral-code"></a>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="userName" placeholder="Username" readonly />
+                            </div>
+                            <div class="form-group form-group-no-bottom-margin">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="your@email.com" readonly />
+                            </div>
+                            <div class="form-group optionsGroup">
+                                <label for="emailVerified" id="emailVerifiedLabel">
+                                    <input type="checkbox" name="emailVerified" value="emailVerified" id="emailVerified" disabled />
+                                    <span class="emailVerifiedSpan">Email Verified</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" placeholder="First Name" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="middleName">Middle Name</label>
+                                <input type="text" id="middleName" placeholder="Middle Name" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Last Name" readonly />
+                            </div>
+                            <div class="form-group optionsGroup">
+                                <label for="gender">Gender</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="gender" value="isMale" id="isMale" disabled />
+                                        Male
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="gender" value="isFemale" id="isFemale" disabled />
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">DOB</label>
+                                <input type="date" id="dob" placeholder="Date of Birth" readonly />
+                            </div>
+                            <div class="form-group">
+                                <label for="mobileNumber">Mobile Number</label>
+                                <input type="tel" id="mobileNumber" class="canBeChanged" placeholder="Mobile Number" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="telephoneNumber">Telephone Number</label>
+                                <input type="tel" id="telephoneNumber" class="canBeChanged" placeholder="Telephone Number" />
+                            </div>
+                            <div class="form-group">
+                                <label for="addressLine1">Address Line 1</label>
+                                <input type="text" id="addressLine1" class="canBeChanged" placeholder="Address Line 1" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="addressLine2">Address Line 2</label>
+                                <input type="text" id="addressLine2" class="canBeChanged" placeholder="Address Line 2" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="addressLine3">Address Line 3</label>
+                                <input type="text" id="addressLine3" class="canBeChanged" placeholder="Address Line 3" />
+                            </div>
+                            <div class="form-group">
+                                <label for="landmark">Landmark</label>
+                                <input type="text" id="landmark" class="canBeChanged" placeholder="Nearest Landmark" />
+                            </div>
+                            <div class="form-group">
+                                <label for="zipCode">Postal Code</label>
+                                <input type="number" id="zipCode" class="canBeChanged" placeholder="Postal Code" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" class="canBeChanged" placeholder="City" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" id="state" class="canBeChanged" placeholder="State" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" class="canBeChanged" placeholder="Country" required />
+                            </div>
+                            <div class="form-group optionsGroup">
+                                <label for="profession">Profession</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="profession" value="isStudent" id="isStudent" disabled>
+                                        Student
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="profession" value="isWorking" id="isWorking" disabled>
+                                        Working
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="profession" value="isJobSeeker" id="isJobSeeker" disabled>
+                                        Job Seeker
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="schoolOrCompany">School Or Company Name</label>
+                                <input type="text" id="schoolOrCompany" placeholder="School Or Company Name" readonly />
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="save-btn">Save Changes</button>
+                                <button type="button" class="cancel-btn">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    <script src="Layout.js"></script>
+</body>
+</html>

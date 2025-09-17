@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GigHz LMS</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="Assessment.css">
+    <script src="jquery.js"></script>
+    <script src="common.js"></script>
+    <script src="Assessment.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div id="hamburger" class="hamburger" onclick="toggleSidebar()">☰</div>
+            <div class="header-right">
+                <div id="notifications" class="icon-btn" onclick="toggleNotificationsDropdown(event)">
+                    🔔
+                    <span class="badge" id="notifCount">3</span>
+                    <div id="notificationsDropdown" class="notifications-dropdown">
+                        <h4>Unread Notifications</h4>
+                        <ul class="notificationList">
+                        </ul>
+                    </div>
+                </div>
+                <div class="icon-btn" title="Help" onclick="location.href='Help.html'">❓</div>
+                <div class="icon-btn" title="Account Settings" onclick="location.href='Settings.html'">⚙️</div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <aside id="sidebar" class="sidebar">
+                <img src="../Logo.png" alt="Logo" class="logo" />
+                <nav>
+                    <a href="Dashboard.html"><span><i class="bi bi-house"></i></span> Dashboard</a>
+                    <a href="Courses.html"><span><i class="bi bi-journals"></i></span> Courses</a>
+                    <a href="Certificates.html"><span><i class="bi bi-card-checklist"></i></span> Certificates</a>
+                    <a href="Events.html"><span><i class="bi bi-calendar2-event"></i></span> Events</a>
+                    <a href="Forum.html"><span><i class="bi bi-chat"></i></span> Forum</a>
+                    <a href="JobPortal.html"><span><i class="bi bi-suitcase-lg"></i></span> Job Portal</a>
+                    <a href="GigHzAI.html"><span><i class="bi bi-anthropic"></i></span> GigHz AI</a>
+                </nav>
+            </aside>
+
+            <main class="main">
+
+                <div class="questionnaire">
+                    
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    <script src="Layout.js"></script>
+</body>
+</html>

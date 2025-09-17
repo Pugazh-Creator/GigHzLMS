@@ -1,0 +1,167 @@
+
+.course-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.course-details, .course-progress {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(214, 51, 132, 0.1);
+}
+
+.course-details {
+    flex: 2;
+    min-width: 300px;
+}
+
+.course-progress {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.course-details h2{
+    font-size:1.8rem;
+}
+
+.course-details h3 {
+    color: #d63384;
+}
+
+
+    .course-progress .progress-list {
+        position: relative;
+        max-width: 400px;
+        margin-left: 40px;
+        padding-left: 0;
+        list-style: none;
+    }
+
+        /* vertical line */
+        .course-progress .progress-list::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 4px;
+            height: 95%;
+            background-color: #ddd;
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        /* progress fill */
+        .course-progress .progress-list::after {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 4px;
+            height: calc(var(--progress, 0) * 100%);
+            background-color: #4caf50;
+            border-radius: 2px;
+            z-index: 1;
+            transition: height 4s ease;
+        }
+
+        .course-progress .progress-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 60px;
+            color: #444;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+            /* icon container */
+            .course-progress .progress-list li .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 28px;
+                height: 28px;
+                background: white;
+                border-radius: 50%;
+                border: 2px solid #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                box-sizing: border-box;
+            }
+
+            /* Completed */
+            .course-progress .progress-list li.completed {
+                color: #4caf50;
+                cursor:pointer;
+            }
+
+                .course-progress .progress-list li.completed .icon {
+                    border-color: #4caf50;
+                    background-color: #4caf50;
+                    color: white;
+                }
+
+            /* Current */
+            .course-progress .progress-list li.current {
+                color: #d63384;
+                font-weight: 700;
+            }
+
+                .course-progress .progress-list li.current .icon {
+                    border-color: #4caf50;
+                    background-color: #d63384;
+                    color: white;
+                }
+
+            /* Upcoming */
+            .course-progress .progress-list li.upcoming {
+                color: #aaa;
+            }
+
+            /* Upcoming */
+            .course-progress .progress-list li.certLi {
+                color: #d63384;
+            }
+                .course-progress .progress-list li.upcoming .icon {
+                    border-color: #ccc;
+                    background-color: white;
+                    color: #ccc;
+                }
+
+            .course-progress .progress-list li.certLi .icon {
+                border-color: #ccc;
+                background-color: gold;
+                color: #ccc;
+            }
+
+
+                .course-progress .progress-list li.certLi .icon circle {
+                    color: #d63384;
+                }
+
+    /* Icon SVG styling */
+    .course-progress .icon svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+@media (max-width: 768px) {
+    .course-container {
+        flex-direction: column;
+    }
+}
+
+
+

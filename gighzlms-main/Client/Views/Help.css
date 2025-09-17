@@ -1,0 +1,167 @@
+
+.help-support {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff0f5;
+    border: 1.5px solid #f7c9dd;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(214, 51, 132, 0.08);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #d63384;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.help-search {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+    .help-search input, .help-search textarea {
+        flex: 1;
+        max-width: 400px;
+        padding: 0.6rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family:inherit;
+    }
+        .help-search textarea{
+            min-height:100px;
+        }
+        .search-btn {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+    .search-btn:hover {
+        background-color: #c02675;
+    }
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-card {
+    background: #ffffff;
+    border: 1px solid #f2c2d9;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(214, 51, 132, 0.05);
+}
+
+    .faq-card h3 {
+        color: #d63384;
+        margin-bottom: 0.5rem;
+        margin-top:0.5rem;
+    }
+
+    .faq-card p {
+        color: #444;
+        font-size: 0.95rem;
+    }
+
+.support-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-btn, .contact-btn-submit, .contact-btn-cancel, .contact-tickets, .contact-btn-back {
+    margin-top: 0.5rem;
+    background: #d63384;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .contact-btn:hover {
+        background-color: #c02675;
+    }
+
+.faq-date {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+span.highlight2 {
+    background-color: #d63384;
+    color:white;
+}
+
+.help-contact{
+    display:none;
+}
+
+.help-tickets {
+    display: none;
+}
+
+.help-tickets table{
+    width:100%;
+    
+}
+
+    .help-tickets table .col1 {
+        width: 120px;
+        font-weight: 600;
+        background-color: #ffe6f0;
+        vertical-align: top;
+        border-left: 1px solid #fcb6d6;
+    }
+
+    .help-tickets table .col2 {
+        text-align: justify;
+        border-left: 1px solid #ffe6f0;
+        border-right: 1px solid #fcb6d6;
+        vertical-align: top;
+    }
+
+
+
+    .help-tickets table .separator td {
+        height: 10px;
+    }
+
+    .help-tickets table .firstRow td {
+        border-top: 1px solid #fcb6d6;
+    }
+
+    .help-tickets table .lastRow td {
+        border-bottom: 1px solid #fcb6d6;
+    }
+
+    .help-tickets table .firstRow .col1 {
+        border-top-left-radius: 10px;
+    }
+
+    .help-tickets table .firstRow .col2 {
+        border-top-right-radius: 10px;
+    }
+
+    .help-tickets table .lastRow .col1 {
+        border-bottom-left-radius: 10px;
+    }
+
+    .help-tickets table .lastRow .col2 {
+        border-bottom-right-radius: 10px;
+    }
